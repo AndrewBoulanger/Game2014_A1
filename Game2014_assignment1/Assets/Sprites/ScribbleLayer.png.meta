@@ -1,34 +1,19 @@
 fileFormatVersion: 2
-guid: e3c45d8f7395f1445ac228a574212e39
+guid: c048778205a462a4bb6a442b8eea959e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3450887148842069260
-    second: stick_run_0
+      213: -579176582531022946
+    second: ScribbleLayer2_0
   - first:
-      213: -5112136861046275021
-    second: stick_run_1
+      213: 8861138844125516226
+    second: ScribbleLayer2_1
   - first:
-      213: -5532053392394949350
-    second: stick_run_2
+      213: -5113277784113814947
+    second: ScribbleLayer2_2
   - first:
-      213: 8407343909695173221
-    second: stick_run_3
-  - first:
-      213: 4269980911303651416
-    second: stick_run_4
-  - first:
-      213: -6472710498233742618
-    second: stick_run_5
-  - first:
-      213: -5522304733030039952
-    second: stick_run_6
-  - first:
-      213: -3535890902309134163
-    second: stick_run_7
-  - first:
-      213: -2355651468198402767
-    second: stick_run_8
+      213: 5987979718152481633
+    second: ScribbleLayer2_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -73,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -166,106 +151,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stick_run_0
+      name: ScribbleLayer2_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 74
-        width: 17
-        height: 44
-      alignment: 9
-      pivot: {x: 0.9264356, y: 0.943841}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0d21ba049304ef20800000000000000
-      internalID: 3450887148842069260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stick_run_1
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 110
-        width: 38
-        height: 40
+        x: 0
+        y: 375
+        width: 567
+        height: 375
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33408223c9a0e09b0800000000000000
-      internalID: -5112136861046275021
+      spriteID: e9f730087f956f7f0800000000000000
+      internalID: -579176582531022946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stick_run_2
+      name: ScribbleLayer2_1
       rect:
         serializedVersion: 2
-        x: 135
-        y: 69
-        width: 34
-        height: 43
-      alignment: 9
-      pivot: {x: 0.27858105, y: 0.95389825}
+        x: 567
+        y: 375
+        width: 567
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1dedcbefb23a33b0800000000000000
-      internalID: -5532053392394949350
+      spriteID: 2c1548594d619fa70800000000000000
+      internalID: 8861138844125516226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stick_run_4
+      name: ScribbleLayer2_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 17
-        width: 33
-        height: 42
-      alignment: 9
-      pivot: {x: 0.9140102, y: 0.97798264}
+        x: 0
+        y: 0
+        width: 567
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 850f3f7f305024b30800000000000000
-      internalID: 4269980911303651416
+      spriteID: d52eff752fcf909b0800000000000000
+      internalID: -5113277784113814947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stick_run_5
+      name: ScribbleLayer2_3
       rect:
         serializedVersion: 2
-        x: 90
-        y: 22
-        width: 32
-        height: 44
-      alignment: 9
-      pivot: {x: 0.03819847, y: 0.8290114}
+        x: 567
+        y: 0
+        width: 567
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ea06d288105c26a0800000000000000
-      internalID: -6472710498233742618
+      spriteID: 16be8b6f3d3991350800000000000000
+      internalID: 5987979718152481633
       vertices: []
       indices: 
       edges: []
