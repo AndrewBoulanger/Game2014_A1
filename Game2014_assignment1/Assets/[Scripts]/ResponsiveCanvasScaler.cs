@@ -1,3 +1,10 @@
+///////-------------------------------------------------------
+/// ResponsiveCanvasScaler.cs created by Andrew Boulanger 101292574
+/// Last modified Oct 2, 2021
+/// changes the anchors of a rectTransform object to match the safe area of a screen, rather than the full screen size
+/// refreshes on rotation, whenever the saved safe area doesn't match the current safe area.
+//////------------------------------------------------------
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
