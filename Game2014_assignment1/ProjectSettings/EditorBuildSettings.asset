@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/[Scenes]/StartScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/[Scenes]/ScoresScene.unity
-    guid: 0bd43c31308c85b48ba660c708c37dd3
-  - enabled: 1
     path: Assets/[Scenes]/InstructionsScene.unity
     guid: 87b6155f332aa0d42aca1cc216e61e53
+  - enabled: 1
+    path: Assets/[Scenes]/InstructionsScene 1.unity
+    guid: ef2145f74bcfd2a488ac662ac611414f
+  - enabled: 1
+    path: Assets/[Scenes]/InstructionsScene 2.unity
+    guid: 1a12a10bccd2b224682eb6e188e62a32
+  - enabled: 1
+    path: Assets/[Scenes]/ScoresScene.unity
+    guid: 0bd43c31308c85b48ba660c708c37dd3
   - enabled: 1
     path: Assets/[Scenes]/GameScene.unity
     guid: c3ad8fcee2461e248a043c05fd93cdb3
