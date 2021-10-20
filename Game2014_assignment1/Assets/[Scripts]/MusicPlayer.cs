@@ -12,6 +12,8 @@ public class MusicPlayer
     private AudioSource musicPlayer;
     private float volume = 0.1f;
 
+    private ObjectPool SFXPlayersPool;
+
     /// <summary>
     /// constructor
     /// </summary>
@@ -39,12 +41,19 @@ public class MusicPlayer
         musicPlayer.volume = volume;
         musicPlayer.loop = true;
 
+        SFXPlayersPool = new ObjectPool();
+        SFXPlayersPool.objectToPool =  Resources.Load("Prefabs/SFXPlayer") as GameObject;
+       
+
     }
 
     public void SetBackGroundMusic(AudioClip music)
     {
-        musicPlayer.clip = music;
-        musicPlayer.Play();
+        if(music != musicPlayer.clip)
+        { 
+            musicPlayer.clip = music;
+            musicPlayer.Play();
+        }
     }
 
     public void setVolume(float volume)
@@ -52,4 +61,13 @@ public class MusicPlayer
         musicPlayer.volume = volume;
     }
    
+    public void PlaySFX(AudioClip clip)
+    {
+        GameObject sfxPlayer = SFXPlayersPool.GetObject(Vector3.zero);
+        GameObject.DontDestroyOnLoad(sfxPlayer);
+        sfxPlayer.GetComponent<AudioSource>().PlayOneShot(clip);
+        sfxPlayer.GetComponent<SFXPlayer>().owner = SFXPlayersPool;
+
+    }
+
 }

@@ -14,6 +14,7 @@ public class ButtonBehaviour : MonoBehaviour
 
     public void LoadScene()
     {
+        PlaySoundEffect();
         SceneManager.LoadScene(tag);
     }
 
@@ -24,11 +25,19 @@ public class ButtonBehaviour : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        PlaySoundEffect();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
 
     public void LoadlastLevel()
     {
+        PlaySoundEffect();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    private void PlaySoundEffect()
+    {
+        AudioClip sfx = Resources.Load("Audio/PageTurn") as AudioClip;
+        MusicPlayer.Instance().PlaySFX(sfx);
     }
 }
