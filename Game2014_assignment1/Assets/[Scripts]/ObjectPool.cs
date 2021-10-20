@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+public class ObjectPool
 {
     public Queue<GameObject> objectPool;
    
@@ -15,17 +15,11 @@ public class ObjectPool : MonoBehaviour
         objectPool = new Queue<GameObject>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        if(objectPool == null)
-            objectPool = new Queue<GameObject>();
-
-    }
+   
 
     protected virtual void AddObjectToPool()
     {
-        GameObject newObject = Instantiate<GameObject>(objectToPool);
+        GameObject newObject = GameObject.Instantiate<GameObject>(objectToPool);
         newObject.SetActive(false);
         objectPool.Enqueue(newObject);
     }
