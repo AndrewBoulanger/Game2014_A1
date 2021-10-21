@@ -97,6 +97,10 @@ GameObject:
   m_Component:
   - component: {fileID: 771167161807477289}
   - component: {fileID: 3373765361283097506}
+  - component: {fileID: 8120531268102608146}
+  - component: {fileID: 1021295175287308130}
+  - component: {fileID: 2225582477434225618}
+  - component: {fileID: 6033906246270412095}
   m_Layer: 0
   m_Name: doodle S
   m_TagString: Untagged
@@ -113,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 3373765361283097507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 495.92142, y: 6.3825154, z: -5744.2637}
-  m_LocalScale: {x: 25.26838, y: 12.56079, z: 63.825153}
+  m_LocalScale: {x: 0.39988273, y: 0.19877979, z: 1.01006}
   m_Children:
   - {fileID: 4396001672011123862}
   m_Father: {fileID: 0}
@@ -171,3 +175,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &8120531268102608146
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373765361283097507}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.56
+--- !u!114 &1021295175287308130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373765361283097507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836ce1d7b65a9a54ba84effb11423c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollisionEffect: 0
+  changeToHudValue: 100
+  isRemovedOnCollision: 1
+  isDamageable: 0
+  collisionAudioClip: {fileID: 8300000, guid: 07cece0d50369b0498de140a654be5cb, type: 3}
+--- !u!50 &2225582477434225618
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373765361283097507}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &6033906246270412095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373765361283097507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f1ec1e5f811beb478b45c8235ea6ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  direction: {x: -1, y: 0, z: 0}

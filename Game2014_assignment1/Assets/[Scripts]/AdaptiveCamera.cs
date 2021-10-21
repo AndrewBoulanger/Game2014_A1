@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public static class ScreenSize
+{
+    public const int width = 21;
+}
+
 public class AdaptiveCamera : MonoBehaviour
 {
     ScreenOrientation orientation;
 
     Camera camera;
-    public float targetScreenWidth = 21.0f;
+    public float targetScreenWidth = ScreenSize.width;
     public Rect targetResolution;
     private Rect newViewPortRect;
 

@@ -8,6 +8,7 @@ public class PlayerLaserController : MonoBehaviour
     public float scalingSpeed;
     private SpriteRenderer renderer;
 
+    public float damageAmount = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +27,13 @@ public class PlayerLaserController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RaycastHit2D hitResults = Physics2D.Raycast(transform.position, transform.right, renderer.size.x);
-        if (hitResults.collider != null && hitResults.collider.gameObject.layer.Equals(6 /*Enemies*/))
+        RaycastHit2D hitResults = Physics2D.Raycast(transform.position, transform.right, renderer.size.x, LayerMask.GetMask("Enemies"));
+        if (hitResults.collider != null)
         {
             renderer.size = new Vector2(hitResults.distance, renderer.size.y);
-
+            hitResults.collider.gameObject.GetComponent<SpawnableObject>().TakeDamage(damageAmount);
             //pass damage amount to the enemy here (they'll use a timer to figure out if they need to take damage this frame)
+            
         }
     }
 

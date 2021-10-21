@@ -10,9 +10,10 @@ public class ObjectPool
 
     public GameObject objectToPool;
 
-    public ObjectPool()
+    public ObjectPool(GameObject objectToPool)
     {
         objectPool = new Queue<GameObject>();
+        this.objectToPool = objectToPool;
     }
 
    
@@ -44,7 +45,6 @@ public class ObjectPool
     {
         returned_object.SetActive(false);
         objectPool.Enqueue(returned_object);
-
     }
 
 }

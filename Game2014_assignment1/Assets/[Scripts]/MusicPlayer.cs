@@ -41,9 +41,8 @@ public class MusicPlayer
         musicPlayer.volume = volume;
         musicPlayer.loop = true;
 
-        SFXPlayersPool = new ObjectPool();
-        SFXPlayersPool.objectToPool =  Resources.Load("Prefabs/SFXPlayer") as GameObject;
-       
+        GameObject sfxplyer_prefab = Resources.Load("Prefabs/SFXPlayer") as GameObject;
+        SFXPlayersPool = new ObjectPool(sfxplyer_prefab);
 
     }
 

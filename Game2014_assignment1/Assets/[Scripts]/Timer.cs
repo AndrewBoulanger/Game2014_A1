@@ -20,4 +20,16 @@ public class Timer
     {
         startTime = Time.time;
     }
+
+    public bool IsTimerDone(float endTime, bool reset = true)
+    {
+        bool timerDone = false;
+        if(GetTime() > endTime)
+        { 
+            timerDone = true;
+            if(reset)
+                Reset();
+        }
+        return timerDone;
+    }
 }

@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //row parameters
     const float rowHeight = 2.6f;
     const float dividerX = -6.0f;
-
-    [SerializeField]
     public Vector3[] rows; 
     int currentRow = 0;
     const int numRows = 3;
 
-    float inputDelay = 0.25f;
     float touchVerticalDeadZone = 50f;
 
     ArmCannonController arm;
     PlayerLaserController laser;
 
-    Timer timer;
+    
+    //lerp parameters
+    int lastRow;
+    bool isLerping = false;
+    float lerpStartTime;
+    float lerpDistance;
+    float MoveSpeed = 15f;
+
     // Start is called before the first frame update
     void Start()
     {
-        timer = new Timer();
         rows = new Vector3[numRows]
         {
             transform.position,
@@ -45,10 +49,9 @@ public class PlayerController : MonoBehaviour
             //left side of the screen
             if(worldTouch.x < dividerX)
             { 
-                if(touch.phase == TouchPhase.Moved && Mathf.Abs(touch.deltaPosition.y) > touchVerticalDeadZone && timer.GetTime() > inputDelay)
+                if(touch.phase == TouchPhase.Moved && Mathf.Abs(touch.deltaPosition.y) > touchVerticalDeadZone && !isLerping)
                 { 
                     TryToMove(touch.deltaPosition.y);
-                    timer.Reset();
                 }
             }
 
@@ -67,6 +70,17 @@ public class PlayerController : MonoBehaviour
         {
             laser.gameObject.SetActive(false);
         }
+
+        if(isLerping)
+        {
+            float distanceCovered = (Time.time - lerpStartTime) * MoveSpeed;
+            float fractionOfJourney = distanceCovered/ lerpDistance;
+
+            transform.position = Vector3.Lerp(rows[lastRow], rows[currentRow], fractionOfJourney);
+
+            if(fractionOfJourney >= 0.99f)
+                isLerping = false;
+        }
     }
 
     private void TryToMove(float VerticalDirection)
@@ -74,15 +88,23 @@ public class PlayerController : MonoBehaviour
         if(VerticalDirection > 0 && currentRow < numRows-1 )
         {
             currentRow++;
-            transform.position = rows[currentRow];
+            setLerpValues(currentRow-1, Vector3.Distance(rows[currentRow-1], rows[currentRow]));
         }
 
         else if(VerticalDirection < 0 && currentRow > 0)
         {
             currentRow--;
-            transform.position = rows[currentRow];
+            setLerpValues(currentRow+1, Vector3.Distance(rows[currentRow+1], rows[currentRow]));
         }
 
+    }
+
+    private void setLerpValues(int lastRow, float moveDistance)
+    {
+        isLerping = true;
+        this.lastRow = lastRow;
+        lerpStartTime = Time.time;
+        lerpDistance = moveDistance;
     }
 
 }

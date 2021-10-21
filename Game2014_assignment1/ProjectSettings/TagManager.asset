@@ -9,6 +9,11 @@ TagManager:
   - InstructionsScene
   - ScoresScene
   - StartScene
+  - Zombie
+  - Health
+  - Laser
+  - Pickup_S
+  - Hole
   layers:
   - Default
   - TransparentFX
@@ -17,7 +22,7 @@ TagManager:
   - Water
   - UI
   - Enemies
-  - 
+  - Laser
   - 
   - 
   - 
