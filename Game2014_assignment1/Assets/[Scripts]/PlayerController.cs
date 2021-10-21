@@ -59,16 +59,16 @@ public class PlayerController : MonoBehaviour
             if(worldTouch.x > dividerX)
             {
                 arm.SetRotationFromPoint(worldTouch);
-                laser.gameObject.SetActive(true);
+                SetLaserActive(true);
             }
             else
             {
-                laser.gameObject.SetActive(false);
+                SetLaserActive(false);
             }
         }
         else
         {
-            laser.gameObject.SetActive(false);
+            SetLaserActive(false);
         }
 
         if(isLerping)
@@ -97,6 +97,12 @@ public class PlayerController : MonoBehaviour
             setLerpValues(currentRow+1, Vector3.Distance(rows[currentRow+1], rows[currentRow]));
         }
 
+    }
+
+    private void SetLaserActive(bool isActive)
+    {
+        if(laser != null)
+            laser.gameObject.SetActive(isActive);
     }
 
     private void setLerpValues(int lastRow, float moveDistance)

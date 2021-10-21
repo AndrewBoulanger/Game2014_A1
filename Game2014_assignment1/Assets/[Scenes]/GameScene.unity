@@ -389,6 +389,50 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &517061634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517061636}
+  - component: {fileID: 517061635}
+  m_Layer: 0
+  m_Name: EffectsPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &517061635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517061634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c3e36e915fd9a49b64521df2b22c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTypes: []
+--- !u!4 &517061636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517061634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6543872, y: -1.7603898, z: -0.87285477}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6288553512310580298, guid: 10df0a072f1bdfd41a7e074bdffdbbd0, type: 3}
@@ -411,6 +455,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea4f9aeb074f38488980d5fe7e4e309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 3
+  health: 3
+  biteSFX: {fileID: 0}
+  zappedSFX: {fileID: 0}
+  pickupSFX: {fileID: 0}
 --- !u!61 &604405540
 BoxCollider2D:
   m_ObjectHideFlags: 0
