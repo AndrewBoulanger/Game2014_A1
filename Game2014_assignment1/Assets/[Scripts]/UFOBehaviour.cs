@@ -55,4 +55,10 @@ public class UFOBehaviour : MonoBehaviour
             }
         }
     }
+
+    private void OnEnable()
+    {
+        if(laserGun != null && movementController != null)
+        ChangeState(UFO_States.Moving);
+    }
 }

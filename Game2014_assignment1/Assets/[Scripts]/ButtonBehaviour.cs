@@ -1,14 +1,24 @@
-///////-------------------------------------------------------
-/// ButtonBehaviour.cs created by Andrew Boulanger 101292574
-/// Last modified Oct 2, 2021
-/// added to button objects to call unity button events
-/// used to change scenes or quit the application
-//////------------------------------------------------------
+/// Author: Andrew Boulanger 101292574
+/// 
+/// File: ButtonBehvaiour.cs
+/// 
+/// Description: loads scenes when a button is pressed
+/// 
+/// last Modified: Oct 19th 2021
+///
+/// version history: 
+///     v1 loads scene based on tag or adjacent scene
+///     v2 now plays sound effects when button is pressed
+///     
+/// 
+
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+/// loads scenes when a button is pressed
 public class ButtonBehaviour : MonoBehaviour
 {
 

@@ -1,6 +1,24 @@
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: ArmCannonController.cs
+/// 
+/// Description: Rotates the arm cannon to aim at the player's finger
+/// 
+/// last Modified: Oct 20th 2021
+///
+/// version history: 
+///     v1 added file and rotation from point function
+///     v2 code cleanup - removed empty update
+/// 
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
+/// Description: Rotates the arm cannon to aim at the player's finger
 
 public class ArmCannonController : MonoBehaviour
 {
@@ -15,12 +33,8 @@ public class ArmCannonController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
+    //calculates rotation from the touch input passed in from the player controller
     public void SetRotationFromPoint(Vector3 point)
     {
         direction = (point - transform.position);

@@ -206,7 +206,6 @@ MonoBehaviour:
   onCollisionEffect: 0
   changeToHudValue: 100
   isRemovedOnCollision: 1
-  isDamageable: 0
   collisionAudioClip: {fileID: 8300000, guid: 07cece0d50369b0498de140a654be5cb, type: 3}
 --- !u!50 &2225582477434225618
 Rigidbody2D:
@@ -241,5 +240,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1ec1e5f811beb478b45c8235ea6ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.5
   direction: {x: -1, y: 0, z: 0}

@@ -1,3 +1,18 @@
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: HudBehaviour.cs
+/// 
+/// Description: updates score and health based on the HudFunction enum passed into it via delegate
+/// 
+/// last Modified: Oct 24th 2021
+///
+/// version history: 
+///     v1 added hud delegate and enum of functions, connected it to the score and health to update those when called.
+///     also ends game if the score is <= 0
+///     v2 now saves the score to player pref when the game ends
+/// 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

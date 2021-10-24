@@ -1,3 +1,18 @@
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: AdaptiveCamera.cs
+/// 
+/// Description: changes camera hight and viewport rect to match the screen to the size of the phone safe area
+/// 
+/// last Modified: Oct 20th 2021
+///
+/// version history: 
+///     v1 added file
+///     v2 added static class for constant screen size.
+/// 
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +22,8 @@ public static class ScreenSize
     public const int width = 21;
 }
 
+
+///changes camera hight and viewport rect to match the screen to the size of the phone safe area
 public class AdaptiveCamera : MonoBehaviour
 {
     ScreenOrientation orientation;
