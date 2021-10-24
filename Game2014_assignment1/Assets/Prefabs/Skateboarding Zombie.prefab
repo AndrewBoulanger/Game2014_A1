@@ -94,8 +94,9 @@ GameObject:
   - component: {fileID: 5165856828446592430}
   - component: {fileID: 5165856828446592418}
   - component: {fileID: 5165856828446592417}
-  - component: {fileID: 5047316833578202414}
   - component: {fileID: 6381549003251282423}
+  - component: {fileID: -6193678295925087892}
+  - component: {fileID: 2282955608054000287}
   m_Layer: 6
   m_Name: Skateboarding Zombie
   m_TagString: Zombie
@@ -205,23 +206,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   direction: {x: -1, y: 0, z: 0}
---- !u!114 &5047316833578202414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5165856828446592429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836ce1d7b65a9a54ba84effb11423c2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onCollisionEffect: 1
-  changeToHudValue: -1
-  isRemovedOnCollision: 0
-  isDamageable: 1
-  collisionAudioClip: {fileID: 8300000, guid: cb786552e3fa18a42b6c7e7fb9505bef, type: 3}
 --- !u!61 &6381549003251282423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -248,3 +232,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5801647, y: 3.4941463}
   m_EdgeRadius: 0
+--- !u!114 &-6193678295925087892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165856828446592429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af111b059ec2ac4bbf229801dc7c6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2282955608054000287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165856828446592429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058accd45b0fbee4ea389f296095799d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollisionEffect: 1
+  changeToHudValue: -1
+  isRemovedOnCollision: 0
+  collisionAudioClip: {fileID: 8300000, guid: cb786552e3fa18a42b6c7e7fb9505bef, type: 3}

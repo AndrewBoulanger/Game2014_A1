@@ -73,7 +73,10 @@ public class HudBehaviour : MonoBehaviour
                 crosses[i].gameObject.SetActive(true);
         }
         if(lives <= 0)
+        { 
             SceneManager.LoadScene(SceneList.GameOverScreen);
+            PlayerPrefs.SetInt("Score", score);
+        }
     }
 
     private void AddToScore(int pointsToAdd)

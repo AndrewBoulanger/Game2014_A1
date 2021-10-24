@@ -23,8 +23,6 @@ public class ArmCannonController : MonoBehaviour
 
     public void SetRotationFromPoint(Vector3 point)
     {
-      
-
         direction = (point - transform.position);
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         zRotation = Quaternion.AngleAxis(angle, Vector3.forward);

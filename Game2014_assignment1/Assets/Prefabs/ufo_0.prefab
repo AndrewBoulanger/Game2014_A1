@@ -93,9 +93,10 @@ GameObject:
   - component: {fileID: 7737201880374292486}
   - component: {fileID: 7737201880374292487}
   - component: {fileID: 7737201880374292484}
-  - component: {fileID: -2231105367888812195}
   - component: {fileID: 2106037412299163584}
   - component: {fileID: 2643086840646260666}
+  - component: {fileID: 4909247061708543984}
+  - component: {fileID: 5451952946400116964}
   m_Layer: 6
   m_Name: ufo_0
   m_TagString: Untagged
@@ -115,6 +116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7737201880041011058}
+  - {fileID: 3342793927788702044}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -186,23 +188,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.041806042}
   serializedVersion: 2
   m_Radius: 0.681806
---- !u!114 &-2231105367888812195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7737201880374292481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836ce1d7b65a9a54ba84effb11423c2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onCollisionEffect: 1
-  changeToHudValue: -1
-  isRemovedOnCollision: 0
-  isDamageable: 1
-  collisionAudioClip: {fileID: 8300000, guid: a92c033ee6d70f2499eb02ffa7b55024, type: 3}
 --- !u!50 &2106037412299163584
 Rigidbody2D:
   serializedVersion: 4
@@ -238,3 +223,106 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   direction: {x: -1, y: 0, z: 0}
+--- !u!114 &4909247061708543984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737201880374292481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058accd45b0fbee4ea389f296095799d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollisionEffect: 1
+  changeToHudValue: -1
+  isRemovedOnCollision: 0
+  collisionAudioClip: {fileID: 8300000, guid: a92c033ee6d70f2499eb02ffa7b55024, type: 3}
+--- !u!114 &5451952946400116964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737201880374292481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f65591a6500bfa4090066599fce4416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserGun: {fileID: 5518824442859811680}
+  rayDistance: 7
+--- !u!1001 &1753563149017701473
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7737201880374292486}
+    m_Modifications:
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.113
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048329067755869447, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+      propertyPath: m_Name
+      value: ufo laser gun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+--- !u!4 &3342793927788702044 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3906333063013463357, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+  m_PrefabInstance: {fileID: 1753563149017701473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5518824442859811680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6107767247702109953, guid: e23a7f48b12a7ca43bb7390c9a942db3, type: 3}
+  m_PrefabInstance: {fileID: 1753563149017701473}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86964570cca5ee468796ea638119a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

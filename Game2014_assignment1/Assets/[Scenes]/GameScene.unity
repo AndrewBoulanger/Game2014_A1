@@ -455,11 +455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea4f9aeb074f38488980d5fe7e4e309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  health: 3
-  biteSFX: {fileID: 0}
-  zappedSFX: {fileID: 0}
-  pickupSFX: {fileID: 0}
 --- !u!61 &604405540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1134,8 +1129,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1891912940}
   - component: {fileID: 1891912939}
+  - component: {fileID: 1891912941}
   m_Layer: 0
-  m_Name: GameObjectController
+  m_Name: ObjectSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1150,15 +1146,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1891912938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3f5b0cbcfe13948b870c2f3da43bff, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e8d0a7350309a6449d85665f4eb2ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectTypes:
-  - {fileID: 6592080299815864839, guid: ed5032ff05ad9d341aa38a4b2f4160a4, type: 3}
-  - {fileID: 3373765361283097507, guid: f3c47be00a90d744baafbd5c72b951fe, type: 3}
-  - {fileID: 8448835892511142664, guid: abe9fc2d698e1734b937c8d2844634d8, type: 3}
-  - {fileID: 5165856828446592429, guid: 970b46f6bad919e4d97abd35c8ccedcd, type: 3}
-  - {fileID: 7737201880374292481, guid: 8864111bc072def49865d6bff29e6afc, type: 3}
   startPositions:
   - {x: 21, y: 2.93}
   - {x: 21, y: 0.15}
@@ -1177,6 +1167,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1891912941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891912938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db3a4d9709e3724dbf1ada72a2cb195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefabs:
+  - {fileID: 7737201880374292481, guid: 8864111bc072def49865d6bff29e6afc, type: 3}
+  - {fileID: 5165856828446592429, guid: 970b46f6bad919e4d97abd35c8ccedcd, type: 3}
+  - {fileID: 3373765361283097507, guid: f3c47be00a90d744baafbd5c72b951fe, type: 3}
+  - {fileID: 6592080299815864839, guid: ed5032ff05ad9d341aa38a4b2f4160a4, type: 3}
+  - {fileID: 8448835892511142664, guid: abe9fc2d698e1734b937c8d2844634d8, type: 3}
+  - {fileID: 5720720540968067902, guid: 7ce97b901d0c01a40831616e341c5ff1, type: 3}
+  - {fileID: 2923169450705447343, guid: 288d154213aa39840be4543936e880ce, type: 3}
 --- !u!1 &1895083870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1469,10 @@ PrefabInstance:
     - target: {fileID: 4735368445023518863, guid: 6645a276b1971b145831cf91d223732c, type: 3}
       propertyPath: m_Name
       value: stickman 1_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735368445023518863, guid: 6645a276b1971b145831cf91d223732c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4735368445023518863, guid: 6645a276b1971b145831cf91d223732c, type: 3}
       propertyPath: m_TagString

@@ -6,31 +6,25 @@ using UnityEngine;
 //component for objects that need to return to an object pool and have an effect when they collide with the player
 public class SpawnableObject : MonoBehaviour
 {
-    private ObjectPool owningPool;
+    protected ObjectPool owningPool;
 
-    private HudDelegate hudDelegate;
+    protected HudDelegate hudDelegate;
 
     public HudFunctions onCollisionEffect;
     public int changeToHudValue;
 
     public bool isRemovedOnCollision;
 
-    public bool isDamageable;
-    float currentDamage = 0;
-    float maxDamage = 10;
-    Timer damageTimer;
-    float damageFrequency = 0.1f;
-    int destructionScoreValue = 50;
-
     public AudioClip collisionAudioClip;
 
-    public void SetHudAndOwnerData(ObjectPool owningPool, HudDelegate del)
+
+    public void SetOwnerData(ObjectPool owningPool)
     {
         this.owningPool = owningPool;
+    }
+    public void SetHudDelegate(HudDelegate del)
+    {
         hudDelegate = del;
-
-        if (isDamageable)
-            damageTimer = new Timer();
     }
 
     // Update is called once per frame
@@ -43,9 +37,8 @@ public class SpawnableObject : MonoBehaviour
 
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
-        currentDamage = 0;
         hudDelegate = null;
     }
 
@@ -65,20 +58,5 @@ public class SpawnableObject : MonoBehaviour
 
     }
 
-    public void TakeDamage(float damage)
-    {
-        if(isDamageable && damageTimer.IsTimerDone(damageFrequency))
-        {
-            currentDamage += damage;
-
-            if(currentDamage >= maxDamage)
-            {
-                //add explosion here
-
-                hudDelegate(HudFunctions.AddToScore, destructionScoreValue);
-                owningPool.ReturnObject(gameObject);
-            }
-        }
-    }
-
 }
+

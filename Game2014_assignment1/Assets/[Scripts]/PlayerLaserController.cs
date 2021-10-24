@@ -31,9 +31,9 @@ public class PlayerLaserController : MonoBehaviour
         if (hitResults.collider != null)
         {
             renderer.size = new Vector2(hitResults.distance, renderer.size.y);
-            SpawnableObject spawnableObject = hitResults.collider.gameObject.GetComponent<SpawnableObject>();
-            if(spawnableObject != null)
-                spawnableObject.TakeDamage(damageAmount);
+            SpawnableEnemy spawnableEnemy = hitResults.collider.gameObject.GetComponent<SpawnableEnemy>();
+            if(spawnableEnemy != null)
+                spawnableEnemy.TakeDamage(damageAmount);
             //pass damage amount to the enemy here (they'll use a timer to figure out if they need to take damage this frame)
             
         }
@@ -44,7 +44,5 @@ public class PlayerLaserController : MonoBehaviour
     {
         renderer.size = new Vector2(0.0f, renderer.size.y);
     }
-
-
 
 }
