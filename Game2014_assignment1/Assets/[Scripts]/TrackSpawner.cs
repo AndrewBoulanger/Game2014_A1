@@ -1,7 +1,25 @@
+
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: TrackSpawner.cs
+/// 
+/// Description: randomly spawns enemies, hazards and pickups on one of the three rows in the game scene
+/// 
+/// last Modified: Oct 24th 2021
+///
+/// version history: 
+///     v1 started as a game object manager with an object pool for each spawnable object
+///     v2 moved object collection to the factory, now this class just chooses what to spawn and where.
+/// 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// randomly spawns enemies, hazards and pickups on one of the three rows in the game scene
+/// </summary>
 public class TrackSpawner : MonoBehaviour
 {
     SpawnableObjectFactory factory;
@@ -60,6 +78,7 @@ public class TrackSpawner : MonoBehaviour
         factory.CreateSpawnableObject(randomObject, randomPos);
     }
 
+    //increases how often objects are spawned in
     void RaiseSpeed()
     {
         speedIncreaseTime -= spawnSpeedIncrement;

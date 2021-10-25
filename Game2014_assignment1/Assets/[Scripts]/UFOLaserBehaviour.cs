@@ -1,3 +1,16 @@
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: UFOLaserBehaviour.cs
+/// 
+/// Description: spawns lasers from the factory to shoot at the player. gets the target from the UFOBehaviour and sets the lasers movement direction and rotation
+/// 
+/// last Modified: Oct 24th 2021
+///
+/// version history: 
+///     v1 
+/// 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

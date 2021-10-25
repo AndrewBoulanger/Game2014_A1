@@ -1,10 +1,26 @@
+
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: MusicPlayer.cs
+/// 
+/// Description: singleton which plays background music and holds a pool of sound effects players
+/// 
+/// last Modified: Oct 20th 2021
+///
+/// version history: 
+///     v1 originally only played background music between
+///     v2 made it a singleton so it could continue playing the instruction screen music between scenes
+///     v3 also gave it a pool to play sound effects
+/// 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 /// <summary>
-/// wont be destroyed on load, shares audio
+/// singleton which plays background music and holds a pool of sound effects players
 /// </summary>
 public class MusicPlayer
 {
@@ -31,7 +47,7 @@ public class MusicPlayer
         return instance;
     }
 
-    // Start is called before the first frame update
+    // sets up the game objects owned by the music player
     void Initialize()
     {
         GameObject audioSourceObject = new GameObject();
@@ -46,6 +62,7 @@ public class MusicPlayer
 
     }
 
+    //allows the background music object to change the music when changing scenes
     public void SetBackGroundMusic(AudioClip music)
     {
         if(music != musicPlayer.clip)
@@ -60,6 +77,7 @@ public class MusicPlayer
         musicPlayer.volume = volume;
     }
    
+    //adds an inactive sound effect player from a pool into the scene, playing the passed in clip. the sfxplayer is returned to the pool when the clip is done
     public void PlaySFX(AudioClip clip)
     {
         GameObject sfxPlayer = SFXPlayersPool.GetObject(Vector3.zero);

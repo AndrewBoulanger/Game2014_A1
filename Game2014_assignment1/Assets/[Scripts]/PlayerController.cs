@@ -1,7 +1,25 @@
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: PlayerController.cs
+/// 
+/// Description: controls how player input affects the player. movement and laser firing.  lerps for movement
+/// 
+/// last Modified: Oct 21th 2021
+///
+/// version history: 
+///     v1 added the ability to move up and down with swiping
+///     v2 added the ability to shoot (well passing touch info to the laser) by holding the right side of the screen
+///     v3 removed a bug with the static prefabs in the instruction screens. they'll work even if they dont have an arm cannon attached
+/// 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// controls how player input affects the player. movement and laser firing. lerps for movement
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     //row parameters
@@ -83,6 +101,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //if moving to a row within bounds set the lerp values to move to that spot.
     private void TryToMove(float VerticalDirection)
     {
         if(VerticalDirection > 0 && currentRow < numRows-1 )
@@ -105,6 +124,7 @@ public class PlayerController : MonoBehaviour
             laser.gameObject.SetActive(isActive);
     }
 
+    //sets the starting pos and the distance of the lerp
     private void setLerpValues(int lastRow, float moveDistance)
     {
         isLerping = true;

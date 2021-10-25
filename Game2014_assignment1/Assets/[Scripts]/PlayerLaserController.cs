@@ -1,7 +1,22 @@
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: PlayerLaserController.cs
+/// 
+/// Description: the actual laser beam part, passes damage data to the enemies. controls the width of the beam
+/// 
+/// last Modified: Oct 20th 2021
+///
+/// version history: 
+///     v1 uses a raycast to check if its colliding with enemies. changes sprite width to extend as its being activated.
+///     its width will reset to the collision point if it does hit an enemy
+/// 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//the actual laser beam part, passes damage data to the enemies. controls the width of the beam
 public class PlayerLaserController : MonoBehaviour
 {
 

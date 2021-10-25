@@ -1,3 +1,20 @@
+
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: SpawnableObject.cs
+/// 
+/// Description: returns itself to the pool when offscreen. Used for any object that needs to be spawned in and might collide with the player 
+///     Has a hud delegate used to tell the hud how to react when the player is hit. These objects are created by the spawnable object factory. 
+///     acts as a base class for spawnable enemy and spawnable animation.
+/// 
+/// last Modified: Oct 24th 2021
+///
+/// version history: 
+///     v1 created file from the spawnable object class with hud delegate and collision effects. checks for collision with player or going off screen
+///     v2 modified to include enemies and animations, then broken apart with inheritance.
+/// 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

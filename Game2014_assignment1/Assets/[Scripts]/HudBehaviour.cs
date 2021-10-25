@@ -28,6 +28,10 @@ public enum HudFunctions
 }
 
 public delegate void HudDelegate(HudFunctions function, int val);
+
+/// <summary>
+/// updates score and health based on the HudFunction enum passed into it via delegate
+/// </summary>
 public class HudBehaviour : MonoBehaviour
 {
     int score = 0;

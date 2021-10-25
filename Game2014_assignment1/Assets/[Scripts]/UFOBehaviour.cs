@@ -1,3 +1,16 @@
+///
+///Author: Andrew Boulanger 101292574
+///
+/// File: UFOBehaviour.cs
+/// 
+/// Description: state machine switching between the move and shoot AI states state. uses raycasting to check for the player
+/// 
+/// last Modified: Oct 24th 2021
+///
+/// version history: 
+///     v1 
+/// 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +20,8 @@ enum UFO_States
     Moving,
     Shooting
 }
+
+///switches between the move and shoot AI states state
 public class UFOBehaviour : MonoBehaviour
 {
     [SerializeField]
